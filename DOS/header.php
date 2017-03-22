@@ -46,18 +46,28 @@
 		</header>
 		<div class="container">
 			<div class="row">
-				<div class="span3 bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav affix-top">
-						<li class="active"><a href="<?php print $template->getURL('/overview'); ?>"><i class="icon-chevron-right"></i> Übersicht</a></li>
-						<li><a href=""><i class="icon-chevron-right"></i> Nachrichten (0)</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Computer</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> AngriffsCenter</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Cluster</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Netzwerkumgebung</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Tools</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Rangliste</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> Lotterie</a></li>
-						<li><a href="<?php print $template->getURL('/logout'); ?>"><i class="icon-chevron-right"></i> Abmelden</a></li>
-					</ul>
-				</div>
-				<div class="span9">
+				<?php
+					if(Auth::isLoggedIn()) {
+						?>
+							<div class="span3 bs-docs-sidebar">
+								<ul class="nav nav-list bs-docs-sidenav affix-top">
+									<li class="active"><a href="<?php print $template->getURL('/overview'); ?>"><i class="icon-chevron-right"></i> Übersicht</a></li>
+									<li><a href=""><i class="icon-chevron-right"></i> Nachrichten (0)</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Computer</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> AngriffsCenter</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Cluster</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Netzwerkumgebung</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Tools</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Rangliste</a></li>
+									<li><a href="#"><i class="icon-chevron-right"></i> Lotterie</a></li>
+									<li><a href="<?php print $template->getURL('/logout'); ?>"><i class="icon-chevron-right"></i> Abmelden</a></li>
+								</ul>
+							</div>
+							<div class="span9">
+						<?php
+					} else {
+						?>
+							<div class="span12">
+						<?php
+					}
+				?>

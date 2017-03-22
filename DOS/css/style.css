@@ -30,3 +30,24 @@ body {
 header {
 	min-height: 30px;
 }
+
+.panel {
+	background: #bbbbbb;
+	color: #000000 !important;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    margin-left: -5px;
+    border: 2px solid #000000;
+    -webkit-box-shadow: 0 0 0 5px, 11px 13px 0 4px black;
+    -moz-box-shadow: 0 0 0 5px, 11px 13px 0 4px black;
+    box-shadow: 0 0 0 5px, 11px 13px 0 4px black;	
+}
+
+.panel label {
+	color: #000000;
+}
+
+.text-danger {
+	color: #aa0000;
+}
